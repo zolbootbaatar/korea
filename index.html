@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>서울둘레길</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">서울둘레길</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">서울둘레길 안내</a></li>
+                <li><a href="#">코스정보</a></li>
+                <li><a href="#">알림/자료</a></li>
+                <li><a href="#">참여마당</a></li>
+                <li><a href="#" class="highlight">서울, 테마산책길</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <span>🌐</span>
+            <span>🔍</span>
+            <span>☰</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="overlay">
+            <h1>서울둘레길 2.0</h1>
+            <p>기존 8개 코스에서 21개 코스로 새롭게!<br />소요시간과 거리 단축으로 부담없이 즐겁게!</p>
+        </div>
+    </section>
+    <section class="search-section">
+        <div class="search-left">
+            <h2><span class="icon">🚶‍♂️</span> 서울둘레길 <span class="green">맞춤 코스 검색</span></h2>
+
+            <div class="search-box">
+                <div class="point-selection">
+                    <button class="point-btn">📍 출발지 선택</button>
+                    <span class="arrow">↔</span>
+                    <button class="point-btn">🏁 도착지 선택</button>
+                </div>
+
+                <div class="level-tabs">
+                    <button class="active">전체</button>
+                    <button>초급</button>
+                    <button>중급</button>
+                    <button>상급</button>
+                </div>
+
+                <div class="filters">
+                    <select>
+                        <option>지역별</option>
+                    </select>
+                    <select>
+                        <option>거리별(km)</option>
+                    </select>
+                    <select>
+                        <option>지하철 노선 선택</option>
+                    </select>
+                </div>
+
+                <div class="search-actions">
+                    <button class="reset-btn">⟳ 초기화</button>
+                    <button class="search-btn">🔍 검색</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-right">
+            <img src="https://i.natgeofe.com/k/58b8e5a7-cbf7-4f12-83d6-b88c92c844fd/south-korea-market.jpg?wp=1&w=1084.125&h=609"
+                alt="걷는 이미지">
+            <div class="event-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfZuqAqUa4wiuPyUFl24N2nBBHotICEJ9C9w&s"
+                    alt="이벤트 이미지">
+            </div>
+        </div>
+    </section>
+    <section class="trail-now">
+        <div class="trail-now-left">
+            <h5>Seoul Trail</h5>
+            <h2>서울둘레길, <span class="green">지금</span></h2>
+            <p>서울 속, 자연의 생기가 가득한<br>산책길을 걸어보세요.</p>
+            <button class="go-btn">바로가기 ➤</button>
+        </div>
+
+        <div class="trail-now-right">
+            <button class="nav-btn prev" onclick="scrollCards('left')">❮</button>
+            <div class="card-wrapper" id="cardWrapper">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKVmctY8eKaAYKP_yjGvIEf5d3bn7AYAviEg&s"
+                        alt="">
+                    <p>[250408] 동행(단... </p>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKVmctY8eKaAYKP_yjGvIEf5d3bn7AYAviEg&s"
+                        alt="">
+                    <p>[250405] 서울둘레...</p>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKVmctY8eKaAYKP_yjGvIEf5d3bn7AYAviEg&s"
+                        alt="">
+                    <p>[250402] 서울둘레...</p>
+                </div>
+                <!-- Нэмэлт картууд энд байж болно -->
+            </div>
+            <button class="nav-btn next" onclick="scrollCards('right')">❯</button>
+        </div>
+    </section>
+
+    <script>
+        function scrollCards(direction) {
+            const wrapper = document.getElementById('cardWrapper');
+            const scrollAmount = 360; // нэг картын өргөн + margin
+
+            if (direction === 'left') {
+                wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    </script>
+    <section class="notice-menu-section">
+        <div class="notice-box">
+            <div class="notice-header">
+                <h3>📢 <span class="bold">공지사항</span></h3>
+                <a href="#">더보기 +</a>
+            </div>
+
+            <ul class="notice-list">
+                <li>
+                    <span class="tag blue">공지</span>
+                    <span class="title">서울둘레길안내센터 기간제 근로자 채용관련 최종 합격자 안내</span>
+                    <span class="date">2025-04-11</span>
+                </li>
+                <li>
+                    <span class="tag blue">공지</span>
+                    <span class="title">오감숲길 톡.톡.톡(치유) (4월 17일)</span>
+                    <span class="date">2025-04-10</span>
+                </li>
+                <li>
+                    <span class="tag blue">공지</span>
+                    <span class="title">오감숲길 톡.톡.톡(실버) 운영 계획 공지</span>
+                    <span class="date">2025-04-01</span>
+                </li>
+                <li>
+                    <span class="tag gray">일반</span>
+                    <span class="title">산불 예방 안내</span>
+                    <span class="date">2025-03-24</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-box">
+            <h3>📋 <span class="bold">즐겨찾는 메뉴</span></h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0uJxzPh5ZvuKfD0dyzEAbU1HqXLYVoAJrNQ&s"
+                        alt="센터 안내" />
+                    <span>센터 안내</span>
+                </div>
+                <div class="menu-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0uJxzPh5ZvuKfD0dyzEAbU1HqXLYVoAJrNQ&s"
+                        alt="코스 정보" />
+                    <span>코스 정보</span>
+                </div>
+                <div class="menu-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0uJxzPh5ZvuKfD0dyzEAbU1HqXLYVoAJrNQ&s"
+                        alt="완주 인증서 안내" />
+                    <span>완주 인증서 안내</span>
+                </div>
+                <div class="menu-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0uJxzPh5ZvuKfD0dyzEAbU1HqXLYVoAJrNQ&s"
+                        alt="명예의 전당" />
+                    <span>명예의 전당</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="social-media">
+        <div class="social-left">
+            <h5>Social Media</h5>
+            <h2>소셜 <span class="blue">미디어</span></h2>
+            <p>서울둘레길의 아름다운 모습을<br>SNS 안에서 둘러보세요.</p>
+            <div class="hashtag">#서울둘레길</div>
+        </div>
+
+        <div class="social-right">
+            <button class="social-nav prev" onclick="scrollSocial('left')">❮</button>
+            <div class="social-cards" id="socialWrapper">
+                <div class="social-card">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/blog/2024/06/shutterstock_2345265717.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" />
+                    <p>서울둘레길 봄꽃 너무 예뻐요! 🌸</p>
+                </div>
+                <div class="social-card">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/blog/2024/06/shutterstock_2345265717.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" />
+                    <p>봄날의 산책길 #서울둘레길</p>
+                </div>
+                <div class="social-card">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/blog/2024/06/shutterstock_2345265717.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" />
+                    <p>주말엔 둘레길 걷기 딱 좋아요!</p>
+                </div>
+                <div class="social-card">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/blog/2024/06/shutterstock_2345265717.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" />
+                    <p>벚꽃길 지나며 한 컷! 📸</p>
+                </div>
+                <div class="social-card">
+                    <img
+                        src="https://ik.imagekit.io/tvlk/blog/2024/06/shutterstock_2345265717.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2" />
+                    <p>#명예의전당 인증 완료!</p>
+                </div>
+            </div>
+            <button class="social-nav next" onclick="scrollSocial('right')">❯</button>
+        </div>
+    </section>
+    <script>
+        function scrollSocial(direction) {
+            const wrapper = document.getElementById('socialWrapper');
+            const scrollAmount = 240;
+
+            if (direction === 'left') {
+                wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+
+</html>
