@@ -181,7 +181,7 @@ body {
 
 .search-right {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 15px;
 }
 
@@ -404,8 +404,8 @@ body {
 }
 
 .menu-item img {
-    width: 48px;
-    height: 48px;
+    width: 90px;
+    height: 90px;
     margin-bottom: 10px;
 }
 
@@ -642,6 +642,24 @@ body {
 
 .social-nav.next {
     right: 10px;
+}
+
+.talk-section {
+    padding: 40px 20px;
+    display: flex;
+    background: #e7f0ff;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    align-items: start;
+}
+
+.talk-section img {
+    width: 50vw;
+    object-fit: cover;
+    /* height: 80vh; */
+    object-position: center;
+    border-radius: 8px;
 }
 
 @media screen and (max-width: 768px) {
